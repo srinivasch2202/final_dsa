@@ -12,6 +12,7 @@ void main()
         {
             printf("not valid");
             break;
+            
         }
     }
     printf("valid");
