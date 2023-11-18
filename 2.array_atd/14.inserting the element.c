@@ -8,17 +8,24 @@ struct array
 struct array arr={{1,2,3,4,5},10,5};
 void main()
 {
-    inserting(5,99);
-    display();
+    inserting(3,99);
 }
 void inserting(int index,int element)
 {
-    for(int i=arr.length;i>index;i--)
+    if(index>=0 && index<arr.size)
     {
-        arr.A[i]=arr.A[i-1];
+        for(int i=arr.length;i>index;i--)
+        {
+            arr.A[i]=arr.A[i-1];
+        }
+        arr.A[index]=element;
+        arr.length+=1;
+        display();
     }
-    arr.A[index]=element;
-    arr.length+=1;
+    else
+    {
+        printf("index is put ofbound");
+    }
 }
 void display()
 {
