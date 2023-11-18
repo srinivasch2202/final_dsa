@@ -24,7 +24,7 @@ void main()
         for(int j=0;j<4;j++)
         {
             printf("%d\t%u\t",A[i][j],&A[i][j]);//in stack contionus but not in heap
-            
+
             p[i][j]=A[i][j];
             q[i][j]=A[i][j];
         }
@@ -41,7 +41,17 @@ void main()
         }
         printf("\n");
     }
- 
+    printf("=======================================\n");
 
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<4;j++)
+        {
+            printf("%d\t%u\t",q[i][j],&q[i][j]);
+
+        }
+        printf("\n");
+    }
+ 
 
 }
